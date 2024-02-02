@@ -1,20 +1,26 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      LEDS
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <!-- LED1 -->
+  <ion-button (click)="encender('LED1')" [color]="getColor(estadoLed1)" fill="outline">encender LED1</ion-button>
+  <ion-button (click)="apagar('LED1')" [color]="getColor(!estadoLed1)" fill="outline">apagar LED1</ion-button>
+<br>
+  <!-- LED2 -->
+  <ion-button (click)="encender('LED2')" [color]="getColor(estadoLed2)" fill="outline">encender LED2</ion-button>
+  <ion-button (click)="apagar('LED2')" [color]="getColor(!estadoLed2)" fill="outline">apagar LED2</ion-button>
+<br>
+  <!-- LED3 -->
+  <ion-button (click)="encender('LED3')" [color]="getColor(estadoLed3)" fill="outline">encender LED3</ion-button>
+  <ion-button (click)="apagar('LED3')" [color]="getColor(!estadoLed3)" fill="outline">apagar LED3</ion-button>
+<br>
+<!-- TODOS LOS LEDS -->
+<ion-button (click)="encender('LED1')" (click)="encender('LED2')"  (click)="encender('LED3')"  fill="outline">encender LEDS</ion-button>
+  <ion-button (click)="apagar('LED1')" (click)="apagar('LED2')" (click)="apagar('LED3')" fill="outline">apagar LEDS</ion-button>
 </ion-content>
+
